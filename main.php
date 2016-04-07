@@ -24,7 +24,7 @@ class DynamicTrackConsumer extends OauthPhirehose
 		if( !isset($data['text']) ) {
 			// deleted
 		} else {
-			$client->LPUSH('tweets', $data);
+			$client->LPUSH('tweets', $status);
 		}
 	}
 	$count++;
