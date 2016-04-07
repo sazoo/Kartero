@@ -5,7 +5,7 @@ require_once('lib/OauthPhirehose.php');
 
 $redis = new RedisManager();
 $client = $redis->connect('127.0.0.1', 6379);
-	
+var_dump($client);
 class DynamicTrackConsumer extends OauthPhirehose
 {
   /**
