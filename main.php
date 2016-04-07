@@ -1,7 +1,7 @@
 <?php
-require_once '../lib/RedisPHPlay.php';
-require_once('../lib/Phirehose.php');
-require_once('../lib/OauthPhirehose.php');
+require_once 'lib/RedisPHPlay.php';
+require_once('lib/Phirehose.php');
+require_once('lib/OauthPhirehose.php');
 
 $redis = new RedisManager();
 $client = $redis->connect('127.0.0.1', 6379);
