@@ -38,8 +38,9 @@ class DynamicTrackConsumer extends OauthPhirehose
    * of shared medium (ie: memcache, DB, filesystem) to determine if the filter has changed and set appropriately. The
    * speed of this method will affect how quickly you can update filters.
    */
-  public function checkFilterPredicates()
+  public function checkFilterPredicates() 
   {
+	  global $client;
     // This is all that's required, Phirehose will detect the change and reconnect as soon as possible
     $tags = $client->LRANGE('tags', 0, -1);
     $this->setTrack($tags);
