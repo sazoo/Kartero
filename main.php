@@ -54,4 +54,5 @@ define("OAUTH_TOKEN", "182698622-g8lw6bo4F3RTh07k0mqjq2wdVmXtu6nFGSN6WKuO");
 define("OAUTH_SECRET", "q9mDN80Be51MVJFAvYlRQcGfHMc8ssH3wDir5pBSepsHZ");
 // Start streaming
 $sc = new DynamicTrackConsumer(OAUTH_TOKEN, OAUTH_SECRET, Phirehose::METHOD_FILTER);
+$sc->setLocations(array(array(-180,-90,180,90)));
 $sc->consume();
